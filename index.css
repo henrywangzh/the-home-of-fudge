@@ -10,11 +10,17 @@ body {
     width: auto;
     display: inline-block;
     padding: 0px 10px;
-    background-color: rgba(225, 242, 255, 0.7); /* Background color with opacity (adjust as needed) */
+    background-color: rgba(225, 242, 255, 0.7);
     border-radius: 0.5em;
 }
 
 a:visited { 
  text-decoration: none; 
  color: blue; 
+}
+
+li {
+  text-align: left; 
+  margin-left: 30%;
+  list-style-position: inside;
 }
