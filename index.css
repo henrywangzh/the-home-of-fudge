@@ -1,3 +1,20 @@
 body {
-    text-align: center
+    text-align: center;
+    background-image: url("hawaii.jpg");
+      background-size: cover;
+
+}
+
+#content{
+    border: 2px solid;
+    width: auto;
+    display: inline-block;
+    padding: 0px 10px;
+    background-color: rgba(225, 242, 255, 0.7); /* Background color with opacity (adjust as needed) */
+    border-radius: 0.5em;
+}
+
+a:visited { 
+ text-decoration: none; 
+ color: blue; 
 }
