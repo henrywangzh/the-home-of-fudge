@@ -1,8 +1,7 @@
 body {
     text-align: center;
     background-image: url("hawaii.jpg");
-      background-size: cover;
-
+    background-size: cover;
 }
 
 #content{
