@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Wang</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="content">
+    <h1>List of Activities and Sports</h1>
+    
+    <div id="gamesDisplay"></div>
+    </div>
+</body>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Step 1: Create a JSON object with data
+      var jsonDataArray = [
+        {
+          "name": "Swimming",
+          "misc": "Started at age 5, cumulative distance swimming is enough to swim from coast to coast"
+        },
+        {
+          "name": "Rowing",
+        },
+        {
+          "name": "Tae Kwon Do",
+        },
+        {
+          "name": "Wushu",
+        },
+        {
+          "name": "Badminton",
+        },
+        {
+          "name": "Kayaking",
+        },
+        {
+          "name": "Canoeing",
+        },
+        {
+          "name": "Skiing",
+        },
+        {
+          "name": "Chess",
+        },
+        {
+          "name": "Reading",
+        },
+        {
+          "name": "Drawing",
+        },
+        {
+          "name": "Cooking",
+        },
+        {
+          "name": "Biking",
+        },
+        {
+          "name": "Walking",
+          "misc": "Walked 54000 steps in 1 day around LA, close encounter with homeless guy who threatened to stab me"
+        },
+        {
+          "name": "Piano",
+        },
+        {
+          "name": "Euphonium",
+        },
+        {
+          "name": "Trombone",
+        },
+        {
+          "name": "Trumpet",
+        },
+      ];
+
+      // Step 2: Display the JSON data in a specified HTML format
+      var jsonDisplayElement = document.getElementById("gamesDisplay");
+      jsonDisplayElement.innerHTML = formatJsonArray(jsonDataArray);
+    });
+
+        // Helper function to format an array of JSON for display
+    function formatJsonArray(jsonDataArray) {
+      var formattedData = jsonDataArray.map(function(entry, index) {
+        return `<div key="${index}">
+                  <h3>${entry.name}</h3> ${entry.genre ? `${entry.genre }` : ''} ${entry.hours ? `| ${entry.hours} hours` : ''}
+                  ${entry.misc  ? `<p>${entry.misc}</p>` : ''}
+                </div>`;
+      });
+
+      return formattedData.join('');
+    }
+  </script>
+</html>
