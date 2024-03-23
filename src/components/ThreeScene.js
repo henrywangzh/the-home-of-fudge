@@ -25,11 +25,10 @@ const ThreeScene = () => {
             0.1,
             1000
         );
-        camera.position.z = 5;
 
         // Create a renderer
         renderer = new THREE.WebGLRenderer({ alpha: true }); // Enable alpha for transparency
-        renderer.setClearColor(0x00d5ff, 1); // Set background color to blue
+        renderer.setClearColor(0x222225, 1); // Set background color to blue
 
         renderer.setSize(window.innerWidth, window.innerHeight);
         sceneRef.current.appendChild(renderer.domElement);
@@ -69,9 +68,24 @@ const ThreeScene = () => {
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
         scene.add(ambientLight);
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 2);
-        directionalLight.position.set(5, 3, 5);
-        scene.add(directionalLight);
+        // Create a directional light
+        const directionalLight2 = new THREE.DirectionalLight(0xffffff, 2);
+        directionalLight2.position.set(10, 5, 10);
+        directionalLight2.target.position.set(10, 0, 0);
+        scene.add(directionalLight2);
+
+        const directionalLight3 = new THREE.DirectionalLight(0xffffff, 3);
+        directionalLight3.position.set(10, -5, 10);
+        directionalLight3.target.position.set(10, 0, 0);
+        scene.add(directionalLight3);
+
+        // // Add a cube
+        // const g = new THREE.BoxGeometry();
+        // const m = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+        // const c = new THREE.Mesh(geometry, material);
+        // // change size of cube
+        // c.position.set(10, 0, 0);
+        // scene.add(c);
 
         // Create a Catmull-Rom spline
         const splinePoints = [];
@@ -154,7 +168,7 @@ const ThreeScene = () => {
         // Text to display and starting position
 
         const renderText = (text) => {
-            if(text === "") {
+            if (text === "") {
                 setLetterColors({});
             }
             let startX = 0;
