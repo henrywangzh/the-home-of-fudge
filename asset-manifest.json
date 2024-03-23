@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/the-home-of-fudge/static/css/main.e2afa40c.css",
-    "main.js": "/the-home-of-fudge/static/js/main.f68e71eb.js",
+    "main.js": "/the-home-of-fudge/static/js/main.c23505de.js",
     "static/js/453.7ac0e517.chunk.js": "/the-home-of-fudge/static/js/453.7ac0e517.chunk.js",
     "index.html": "/the-home-of-fudge/index.html",
     "main.e2afa40c.css.map": "/the-home-of-fudge/static/css/main.e2afa40c.css.map",
-    "main.f68e71eb.js.map": "/the-home-of-fudge/static/js/main.f68e71eb.js.map",
+    "main.c23505de.js.map": "/the-home-of-fudge/static/js/main.c23505de.js.map",
     "453.7ac0e517.chunk.js.map": "/the-home-of-fudge/static/js/453.7ac0e517.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2afa40c.css",
-    "static/js/main.f68e71eb.js"
+    "static/js/main.c23505de.js"
   ]
 }
