@@ -36,13 +36,13 @@
 
 /* Typography */
 .content-card h2 {
-  font-size: 1.5vw;
+  font-size: 25px;
   color: #333;
   margin-bottom: 1vw; /* Use viewport units for margin */
 }
 
 .content-card p, .content-card li {
-  font-size: 1vw;
+  font-size: 16px;
   color: #666;
   margin-bottom: 1vw; /* Use viewport units for margin */
 }
@@ -58,12 +58,12 @@
   }
 
   .content-card h2 {
-    font-size: 4vw; /* Use a percentage-based font size */
+    font-size: 20px; /* Use a percentage-based font size */
     margin-bottom: 1vw; /* Use a percentage-based margin */
   }
 
   .content-card p, .content-card li{
-    font-size: 2.5vw; /* Use a percentage-based font size */
+    font-size: 16px; /* Use a percentage-based font size */
   }
 }
 
