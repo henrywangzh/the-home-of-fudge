@@ -63,7 +63,7 @@ const ThreeScene = () => {
             cubeSplineGeometry,
             cubeSplineMaterial
         );
-        scene.add(cubeSplineObject);
+        // scene.add(cubeSplineObject);
 
         // Add lights
         const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
