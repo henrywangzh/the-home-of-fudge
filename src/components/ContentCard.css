@@ -1,0 +1,69 @@
+/* ContentCard.css */
+
+.content-card {
+  height: 87vh; /* Adjust the value as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #fff;
+  padding: 20px; /* Use fixed padding */
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  max-width: 30%; /* Use a percentage-based width */
+  margin: 2% auto 2% 2%; /* Use viewport units for margin */
+  transition: box-shadow 0.3s ease, max-width 1s ease-out, transform 1s ease;
+}
+
+.content-card.expanded {
+  position: fixed;
+  transform: translateX(39%); /* Move card to the center horizontally */
+  /* top: 50%; */
+  /* left: 50%; */
+  z-index: 1; /* Ensure the card is on top of other elements */
+  max-width: 50%; /* Use a percentage-based width */
+}
+
+.content-card.collapsed {
+  position: fixed;
+  transform: translateX(-20%, 40); /* Move card to the center horizontally */
+  /* top: 50%; */
+  /* left: 50%; */
+  z-index: 1; /* Ensure the card is on top of other elements */
+  max-width: 10%; /* Use a percentage-based width */
+}
+
+.content-card:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5); /* Adjust shadow on hover */
+}
+
+/* Typography */
+.content-card h2 {
+  font-size: 1.5vw;
+  color: #333;
+  margin-bottom: 1vw; /* Use viewport units for margin */
+}
+
+.content-card p, .content-card li {
+  font-size: 1vw;
+  color: #666;
+  margin-bottom: 1vw; /* Use viewport units for margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .content-card {
+    height: 88vh; /* Adjust the value as needed */
+    padding: 2vw; /* Use viewport units for padding */
+    border-radius: 3vw;
+    max-width: 90vw; /* Use a percentage-based width */
+    margin: 3vw;
+  }
+
+  .content-card h2 {
+    font-size: 4vw; /* Use a percentage-based font size */
+    margin-bottom: 1vw; /* Use a percentage-based margin */
+  }
+
+  .content-card p, .content-card li{
+    font-size: 2.5vw; /* Use a percentage-based font size */
+  }
+}
+
