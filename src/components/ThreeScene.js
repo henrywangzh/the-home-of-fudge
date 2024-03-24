@@ -50,8 +50,8 @@ const ThreeScene = () => {
             const z = Math.random() * 40 - 20; // Random z coordinate within range (-20, 20)
             cubeSplinePoints.push(new THREE.Vector3(x, y, z));
         }
-        cubeSplinePoints.push(cubeSplinePoints[0]); // Close the spline loop
         const cubeSpline = new THREE.CatmullRomCurve3(cubeSplinePoints);
+        cubeSpline.closed = true; // Close the spline loop
         const cubeSplineGeometry = new THREE.BufferGeometry().setFromPoints(
             cubeSpline.getPoints(100)
         );
@@ -102,12 +102,13 @@ const ThreeScene = () => {
             }
             splinePoints.push(new THREE.Vector3(x + 10, y, z)); // Add the point to the spline
         }
-        splinePoints.push(splinePoints[0]); // Close the spline loop
 
         const spline = new THREE.CatmullRomCurve3(splinePoints);
         const splineGeometry = new THREE.BufferGeometry().setFromPoints(
             spline.getPoints(100)
         );
+        spline.closed = true; // Close the spline loop
+
         const splineMaterial = new THREE.LineBasicMaterial({ color: 0xff0000 });
         const splineObject = new THREE.Line(splineGeometry, splineMaterial);
         // scene.add(splineObject);
